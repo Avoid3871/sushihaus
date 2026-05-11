@@ -8,4 +8,8 @@ Das Projekt ist eine moderne, responsive Website für das Restaurant **Sushi Hau
 - **GitHub Upload:** Repository auf GitHub unter [Avoid3871/sushihaus](https://github.com/Avoid3871/sushihaus) erstellt und Code hochgeladen.
 - **Vercel Deployment:** Die Website wurde erfolgreich auf Vercel deployt.
 - **Live-URL:** [https://sushihaus.vercel.app/](https://sushihaus.vercel.app/)
-- **README & Metadaten:** `README.md` hinzugefügt und die Homepage-URL im GitHub-Repo hinterlegt.
+- **GitHub Professionalisierung:**
+    - Erstellung eines KI-generierten Premium-Banners für das Repository.
+    - Vollständiger Rewrite der `README.md` mit Badges, Features und Installationsanleitung.
+    - Hinzufügen einer MIT-Lizenz.
+    - Optimierung der Repository-Metadaten (Topics & Beschreibung) für bessere Sichtbarkeit.
