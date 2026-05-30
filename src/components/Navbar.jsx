@@ -46,7 +46,6 @@ export default function Navbar({ scrollY }) {
       >
         <div className="navbar__inner container">
           <button className="navbar__logo" onClick={() => scrollTo('hero')} aria-label="Zurück zum Anfang">
-            <span className="navbar__logo-icon">鮨</span>
             <span className="navbar__logo-text">Sushihaus</span>
           </button>
 

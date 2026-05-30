@@ -3,7 +3,7 @@ import './Footer.css'
 
 const currentYear = new Date().getFullYear()
 
-export default function Footer() {
+export default function Footer({ onOpenImpressum, onOpenDatenschutz }) {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -14,7 +14,6 @@ export default function Footer() {
         <div className="footer__grid">
           <div className="footer__brand">
             <button className="footer__logo" onClick={() => scrollTo('hero')}>
-              <span className="footer__logo-icon">鮨</span>
               <span className="footer__logo-text">Sushihaus</span>
             </button>
             <p className="footer__tagline">
@@ -54,8 +53,8 @@ export default function Footer() {
         <div className="footer__bottom">
           <p className="footer__copyright">© {currentYear} Sushihaus Weiden. Alle Rechte vorbehalten.</p>
           <div className="footer__legal">
-            <a href="#impressum">Impressum</a>
-            <a href="#datenschutz">Datenschutz</a>
+            <button onClick={onOpenImpressum} className="footer__legal-btn">Impressum</button>
+            <button onClick={onOpenDatenschutz} className="footer__legal-btn">Datenschutz</button>
           </div>
         </div>
       </div>

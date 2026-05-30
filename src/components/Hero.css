@@ -212,6 +212,10 @@
     align-items: flex-start;
   }
 
+  .hero__badge {
+    margin-top: 80px;
+  }
+
   .hero__hours {
     min-width: auto;
     width: 100%;
@@ -222,17 +226,40 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hero {
+    min-height: 100svh;
     padding-bottom: var(--space-xl);
+  }
+
+  .hero__badge {
+    font-size: var(--text-xs);
+    padding: 6px 14px;
+  }
+
+  .hero__description {
+    font-size: var(--text-base);
   }
 
   .hero__actions {
     flex-direction: column;
+    width: 100%;
   }
 
   .hero__actions .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .hero__hours {
+    padding: var(--space-lg);
+  }
+
+  .hero__hours-row {
+    gap: var(--space-md);
+  }
+
+  .hero__hours-time {
+    font-size: var(--text-xs);
   }
 }

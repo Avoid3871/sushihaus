@@ -128,10 +128,10 @@
   top: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
-  max-width: 400px;
   z-index: calc(var(--z-sticky) - 1);
-  background: rgba(10, 10, 10, 0.95);
+  background: rgba(10, 10, 10, 0.97);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
 }
@@ -170,11 +170,21 @@
     display: none;
   }
 
-  .navbar__cta {
+  .navbar .navbar__cta {
     display: none;
   }
 
   .navbar__hamburger {
     display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 14px 0;
+  }
+
+  .navbar--scrolled {
+    padding: 10px 0;
   }
 }

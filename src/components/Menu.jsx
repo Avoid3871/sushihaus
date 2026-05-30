@@ -100,30 +100,32 @@ export default function Menu() {
         </motion.div>
 
         {/* Category Tabs */}
-        <motion.div
-          className="menu__tabs"
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              className={`menu__tab ${activeCategory === cat ? 'menu__tab--active' : ''}`}
-              onClick={() => setActiveCategory(cat)}
-            >
-              {menuData[cat].label}
-              {activeCategory === cat && (
-                <motion.span
-                  className="menu__tab-bg"
-                  layoutId="menuTab"
-                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                />
-              )}
-            </button>
-          ))}
-        </motion.div>
+        <div className="menu__tabs-wrapper">
+          <motion.div
+            className="menu__tabs"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`menu__tab ${activeCategory === cat ? 'menu__tab--active' : ''}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {menuData[cat].label}
+                {activeCategory === cat && (
+                  <motion.span
+                    className="menu__tab-bg"
+                    layoutId="menuTab"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
+              </button>
+            ))}
+          </motion.div>
+        </div>
 
         {/* Menu Items */}
         <AnimatePresence mode="wait">
@@ -179,7 +181,7 @@ export default function Menu() {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          Alle Preise inkl. MwSt. · Allergene & Zusatzstoffe auf Nachfrage · Änderungen vorbehalten
+          Alle Preise in Euro inkl. der gesetzlichen MwSt. Informationen zu Allergenen und Zusatzstoffen erhältst du auf Nachfrage bei unserem Personal. Änderungen vorbehalten.
         </motion.p>
       </div>
     </section>

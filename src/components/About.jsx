@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import interiorImg from '../assets/restaurant-interior.png'
+import interiorImg from '../assets/sushihaus-interior.jpg'
 import './About.css'
 
 const stats = [
@@ -74,8 +74,7 @@ export default function About() {
                 Liebe zum Detail zubereitet.
               </p>
               <p>
-                Genießen Sie vor Ort, bestellen Sie zur Abholung oder lassen Sie 
-                sich beliefern. Wir freuen uns auf Ihren Besuch!
+                Genießen Sie vor Ort oder bestellen Sie zur Abholung. Wir freuen uns auf Ihren Besuch!
               </p>
             </div>
 
@@ -91,13 +90,6 @@ export default function About() {
                   <path d="M16 16h6v6h-6z"/><path d="M2 2h6v6H2z"/><path d="M5 8v4a4 4 0 0 0 4 4h3"/><path d="M15 16v-4a4 4 0 0 0-4-4H8"/>
                 </svg>
                 <span>Abholung</span>
-              </div>
-              <div className="about__service">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                  <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-                </svg>
-                <span>Lieferung</span>
               </div>
             </div>
           </motion.div>
