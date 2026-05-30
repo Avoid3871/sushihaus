@@ -97,11 +97,6 @@ export default function Contact() {
               <div className="contact__service-badge">
                 <span className="contact__service-dot contact__service-dot--green" />
                 Abholung
-              </div>
-              <div className="contact__service-badge">
-                <span className="contact__service-dot contact__service-dot--green" />
-                Lieferung
-              </div>
             </div>
           </motion.div>
 
