@@ -19,6 +19,7 @@ Das Projekt ist eine moderne, responsive Website für das Restaurant **Sushi Hau
 - **SEO & Search Indexing:** `robots.txt` und `sitemap.xml` im `/public` Ordner generiert, damit Google und andere KIs die Seite sauber crawlen können. (Schema.org JSON-LD für AI Empfehlungen war bereits in der `index.html` verankert).
   - **Rechtliches (Impressum & Datenschutz):** Ein wiederverwendbares Modal-System (`LegalModal.jsx`) inkl. Animationen und Scroll-Lock gebaut. Im Footer öffnen die Links für Impressum und Datenschutz nun elegante Pop-ups. Die realen Daten (Sushihaus Weiden, Sebastianstraße 5) wurden in die Platzhalter übernommen.
   - **Gastronomie-Pflichtangaben (LMIV & PAngV):** Unter der Speisekarte wurde ein rechtlich sicherer Disclaimer-Text eingebaut: *"Alle Preise in Euro inkl. der gesetzlichen MwSt. Informationen zu Allergenen und Zusatzstoffen erhältst du auf Nachfrage bei unserem Personal. Änderungen vorbehalten."*
+  - **Letzter Aufräum-Schritt:** Den übrig gebliebenen "Lieferung"-Badge im Kontakt-Bereich ganz unten entfernt, da dieser Service nicht mehr angeboten wird.
 - **Navbar CTA Specificity Fix:** "Reservieren" Button war auf Mobile sichtbar, weil `.btn { display: inline-flex }` aus `index.css` die gleiche Spezifität wie `.navbar__cta { display: none }` hatte. Fix: Selektor auf `.navbar .navbar__cta` erhöht (Spezifität 0-2-0 statt 0-1-0).
 
 ## Änderungen - 11.05.2026
