@@ -1,15 +1,16 @@
-import { kv } from '@vercel/kv';
+import { Redis } from '@upstash/redis';
 import { defaultMenuData } from '../src/data/defaultMenu.js';
+
+const redis = Redis.fromEnv();
 
 export default async function handler(req, res) {
   try {
     if (req.method === 'GET') {
       let menu = null;
       try {
-        // Fallback checks if kv is configured (might throw if URL is missing)
-        menu = await kv.get('sushihaus_menu');
+        menu = await redis.get('sushihaus_menu');
       } catch (e) {
-        console.warn('KV store not fully configured or failed. Returning default menu.');
+        console.warn('Redis store not fully configured or failed. Returning default menu.', e);
       }
       
       if (!menu) {
@@ -26,11 +27,11 @@ export default async function handler(req, res) {
       }
 
       try {
-        await kv.set('sushihaus_menu', menuData);
+        await redis.set('sushihaus_menu', menuData);
         return res.status(200).json({ success: true });
       } catch (e) {
-        console.error('Failed to save to KV', e);
-        return res.status(500).json({ error: 'Failed to save to database. Is Vercel KV configured?' });
+        console.error('Failed to save to Redis', e);
+        return res.status(500).json({ error: 'Failed to save to database.' });
       }
     }
 
